@@ -1,0 +1,52 @@
+{
+  "entities": {
+    "Interaction": {
+      "title": "Interaction",
+      "description": "A user-authored journal entry or reflection conversation turn with Gemini.",
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the interaction"
+        },
+        "userId": {
+          "type": "string",
+          "description": "Owner user ID matching request.auth.uid"
+        },
+        "title": {
+          "type": "string",
+          "description": "Short title or summary of the reflection"
+        },
+        "prompt": {
+          "type": "string",
+          "description": "User's journal entry or reflection input"
+        },
+        "response": {
+          "type": "string",
+          "description": "Gemini's reflection, feedback, or brainstorming response"
+        },
+        "modelUsed": {
+          "type": "string",
+          "description": "Gemini model identifier used to generate the response"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Creation timestamp"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Last update timestamp"
+        }
+      },
+      "required": ["userId", "prompt", "response", "createdAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}/interactions/{interactionId}": {
+      "schema": "Interaction",
+      "description": "Isolated journal entries and AI reflections for the authenticated user"
+    }
+  }
+}

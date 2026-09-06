@@ -1,0 +1,6 @@
+{
+  "name": "Govind Sarthi AI (श्री गोविंद सारथी)",
+  "description": "An empathetic spiritual reflection journal inspired by the Bhagavad Gita and Mahabharata, with resilient Gemini 3.6 Flash, Firebase Auth, and user-isolated Firestore.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
